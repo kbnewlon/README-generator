@@ -1,0 +1,27 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "README Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbnewlon/README-generator.git"
+  },
+  "keywords": [
+    "README",
+    "generator",
+    "screencastify"
+  ],
+  "author": "kbnewlon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbnewlon/README-generator/issues"
+  },
+  "homepage": "https://github.com/kbnewlon/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
