@@ -1,40 +1,47 @@
-const inquirer = require ("inquirer");
-const fs = require ("fs");
+const inquirer = require("inquirer");
+const fs = require("fs");
 
 
 inquirer.prompt([
     {
         type: "input",
-        name: "userName",
-        message: "What is your name?"
+        name: "title",
+        message: "Enter your project title?"
 
     },
     {
-        type: "input",
-        name: "location",
-        message: "What is your location?"
+        input: "input",
+        name: "githubREPO",
+        message: "What is URL to your Github Repo?"
     },
+
     {
         type: "input",
-        name: "bio",
-        message: "What is your bio?"
+        name: "description",
+        message: "Please provide a description including any necessary installation instructions, usage information, contribution guidelines, and test instructions?"
     },
     {
-        type: "input",
-        name: "linkedinUrl",
-        message: "What is your LinkedIn URL?"
+        type: "list",
+        name: "license",
+        message: "What licenses would you like to include?",
+        choices: []
     },
     {
         input: "input",
         name: "githubUrl",
         message: "What is your Github URL?"
+    },
+    {
+        input: "input",
+        name: "email",
+        message: "What is your email?"
     }
 
 ]).then(function (data) {
     console.log(data)
-    const MyHtmlTemplate = htmlTemplate(data)
+    const MyREADMETemplate = READMETemplate(data)
 
-    fs.writeFile("profile.html", MyHtmlTemplate, function (err) {
+    fs.writeFile("README.html", MyREADMETemplate, function (err) {
         if (err) {
             console.log(err);
         } else {
@@ -49,8 +56,8 @@ inquirer.prompt([
 
 
 
-function htmlTemplate(userAnswer) {
-    return `<!doctype html>
+    function READMETemplate(userAnswer) {
+        return `<!doctype html>
 <html lang="en">
   <head>
      <!-- Required meta tags -->
@@ -79,4 +86,4 @@ function htmlTemplate(userAnswer) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    </body>
 </html>`
-}
+    }
