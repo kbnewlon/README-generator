@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-
+//use inquirer to prompt questions
 inquirer.prompt([
     {
         input: "input",
@@ -62,6 +62,7 @@ inquirer.prompt([
         message: "What is your email?"
     }
 
+//use this function to write a file with the data entered by the user 
 ]).then(function (data) {
     console.log(data)
     const MyREADMETemplate = READMETemplate(data)
@@ -75,6 +76,7 @@ inquirer.prompt([
 
     });
 
+// I created a template as to where I want the users info to go. 
 
     function READMETemplate(userAnswer) {
         return `# ${userAnswer.title}

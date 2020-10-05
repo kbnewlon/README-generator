@@ -1,9 +1,9 @@
-# README Generator
+# README-generator
 ![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/README-generator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
        
 ## Description 
-This is a Node CLI used for creating READMEs
+This is a Node CLI used for generating thorough READMEs for applications
 
 ## Table of Contents 
 * [Installation](#Installation)
@@ -26,7 +26,7 @@ Copyright (c) 2020, Kayla Newlon. (MIT License)
 No guidelines at this time 
 
 ## Tests
-No tests available 
+No tests available
 
 ## Questions 
 Please contact me if you have any questions at:
