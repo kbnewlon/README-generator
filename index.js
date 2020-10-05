@@ -66,7 +66,7 @@ inquirer.prompt([
     console.log(data)
     const MyREADMETemplate = READMETemplate(data)
 
-    fs.writeFile("README.md", MyREADMETemplate, function (err) {
+    fs.writeFile("generatedREADME.md", MyREADMETemplate, function (err) {
         if (err) {
             console.log(err);
         } else {
@@ -78,39 +78,37 @@ inquirer.prompt([
 
     function READMETemplate(userAnswer) {
         return `${userAnswer.title}
-        ![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${userAnswer.repoName})
+![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${userAnswer.githubREPO})
         
-        ## Description 
-        ${userAnswer.description}
+## Description 
+${userAnswer.description}
 
-        ## Table of Contents 
-        -[Installation](#Installation)
-        -[Usage](#Usage)
-        -[License](#License)
-        -[Contributing](#Contributing)
-        -[Tests](#Tests)
-        -[Questions](#Questions)
+## Table of Contents 
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
 
-        ## Installation
-        ${userAnswer.installation}
+# Installation {#Installation}
+${userAnswer.installation}
 
-        #Usage
-        ${userAnswer.usage}
+# Usage
+${userAnswer.usage}
 
-        #License
-        ${userAnswer.license}
+# License
+${userAnswer.license}
 
-        #Contributing 
-        ${userAnswer.contributing}
+# Contributing 
+${userAnswer.contributing}
 
-        #Tests
-        ${userAnswer.tests}
+# Tests
+${userAnswer.tests}
 
-        #Questions 
-        Please contact me if you have any questions. 
-        ${userAnswer.email}
-        ${userAnswer.githubUrl}
-
-
+# Questions 
+Please contact me if you have any questions. 
+${userAnswer.email}
+${userAnswer.githubUrl}
 `
     }});
