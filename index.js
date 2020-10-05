@@ -4,27 +4,52 @@ const fs = require("fs");
 
 inquirer.prompt([
     {
-        type: "input",
-        name: "title",
-        message: "Enter your project title?"
-
+        input: "input",
+        name: "githubUsername",
+        message: "What is your Github Username?"
     },
     {
         input: "input",
         name: "githubREPO",
         message: "What is URL to your Github Repo?"
     },
+    {
+        type: "input",
+        name: "title",
+        message: "Enter your project title?"
 
+    },
     {
         type: "input",
         name: "description",
-        message: "Please provide a description including any necessary installation instructions, usage information, contribution guidelines, and test instructions?"
+        message: "Please provide a description for your README"
     },
     {
-        type: "list",
+        type: "input",
+        name:"installation", 
+        message:"Please provide any necessary installation instructions."
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Please provide any usage information"
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "Please provide any guidelines for contribution."
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Please provide any test instructions."
+    },
+    
+    {
+        type: "input",
         name: "license",
         message: "What licenses would you like to include?",
-        choices: []
+    
     },
     {
         input: "input",
@@ -51,13 +76,23 @@ inquirer.prompt([
     });
 
 
-
-
-
-
-
     function READMETemplate(userAnswer) {
-        return `<!doctype html>
+        return `${userAnswer.title}
+        ![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${answer.repoName})
+        
+        ## Description 
+        ${userAnswer.description}
+
+        ## Table of Contents 
+        -[Installation](#Installation)
+        -[Usage](#Usage)
+        -[License](#License)
+        -[Contributing](#Contributing)
+        -[Tests](#Tests)
+        -[Questions](#Questions)
+
+        
+        <!doctype html>
 <html lang="en">
   <head>
      <!-- Required meta tags -->
