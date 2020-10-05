@@ -1,8 +1,9 @@
-
-![GitHub License](https://img.shields.io/github/license//)
-        
+# README Generator
+![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/README-generator)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+       
 ## Description 
-
+This is a Node CLI used for creating READMEs
 
 ## Table of Contents 
 * [Installation](#Installation)
@@ -12,22 +13,22 @@
 * [Tests](#Tests)
 * [Questions](#Questions)
 
-# Installation {#Installation}
+## Installation
+Run npm install in your command terminal
 
+## Usage
+Run node index.js to begin the program
 
-# Usage
+## License
+Copyright (c) 2020, Kayla Newlon. (MIT License)
 
+## Contributing 
+No guidelines at this time 
 
-# License
+## Tests
+No tests available 
 
-
-# Contributing 
-
-
-# Tests
-
-
-# Questions 
-Please contact me if you have any questions. 
-
-
+## Questions 
+Please contact me if you have any questions at:
+<br>Email: kbnewlon@hotmail.com
+<br>Github: https://github.com/kbnewlon

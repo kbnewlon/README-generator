@@ -1,4 +1,9 @@
-![information in brackets](https://img.shields.io/github/issues/kbnewlon/README-generator
+# README-Generator
+
+![information in brackets](https://img.shields.io/github/issues/kbnewlon/README-generator)
+![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/README-generator)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
 --
 
 REPO URL: https://github.com/kbnewlon/README-generator <br>
@@ -10,10 +15,10 @@ SO THAT can quickly create a professional README for a new project
 
 LINK TO WALKTHROUGH
 
-SAMPLE RAD ME PIC
+SAMPLE READ ME PIC
+Copyright (c) 2020, Kayla Newlon. (MIT License)
 
-
-Description: This is a CLI used for creating READMEs
+Description: This is a Node CLI used for creating READMEs
 
 
 Your task is to create a command-line application that dynamically generates a professional README.md from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) as a reminder of everything that a quality, professional README contains. The application will be invoked with the following command:

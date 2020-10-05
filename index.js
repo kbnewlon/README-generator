@@ -27,7 +27,7 @@ inquirer.prompt([
     {
         type: "input",
         name:"installation", 
-        message:"Please provide any necessary installation instructions."
+        message:"Please provide any necessary installation instructions"
     },
     {
         type: "input",
@@ -37,12 +37,12 @@ inquirer.prompt([
     {
         type: "input",
         name: "contributing",
-        message: "Please provide any guidelines for contribution."
+        message: "Please provide any guidelines for contribution"
     },
     {
         type: "input",
         name: "tests",
-        message: "Please provide any test instructions."
+        message: "Please provide any test instructions"
     },
     
     {
@@ -77,9 +77,10 @@ inquirer.prompt([
 
 
     function READMETemplate(userAnswer) {
-        return `${userAnswer.title}
-![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${userAnswer.githubREPO})
-        
+        return `# ${userAnswer.title}
+![GitHub top language](https://img.shields.io/github/languages/top/${userAnswer.githubUsername}/${userAnswer.title})
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+       
 ## Description 
 ${userAnswer.description}
 
@@ -91,24 +92,24 @@ ${userAnswer.description}
 * [Tests](#Tests)
 * [Questions](#Questions)
 
-# Installation {#Installation}
+## Installation
 ${userAnswer.installation}
 
-# Usage
+## Usage
 ${userAnswer.usage}
 
-# License
+## License
 ${userAnswer.license}
 
-# Contributing 
+## Contributing 
 ${userAnswer.contributing}
 
-# Tests
+## Tests
 ${userAnswer.tests}
 
-# Questions 
-Please contact me if you have any questions. 
-${userAnswer.email}
-${userAnswer.githubUrl}
+## Questions 
+Please contact me if you have any questions at:
+<br>Email: ${userAnswer.email}
+<br>Github: ${userAnswer.githubUrl}
 `
     }});
