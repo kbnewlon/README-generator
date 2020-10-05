@@ -66,7 +66,7 @@ inquirer.prompt([
     console.log(data)
     const MyREADMETemplate = READMETemplate(data)
 
-    fs.writeFile("README.html", MyREADMETemplate, function (err) {
+    fs.writeFile("README.md", MyREADMETemplate, function (err) {
         if (err) {
             console.log(err);
         } else {
@@ -78,7 +78,7 @@ inquirer.prompt([
 
     function READMETemplate(userAnswer) {
         return `${userAnswer.title}
-        ![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${answer.repoName})
+        ![GitHub License](https://img.shields.io/github/license/${userAnswer.githubREPO}/${userAnswer.repoName})
         
         ## Description 
         ${userAnswer.description}
